@@ -1,5 +1,6 @@
 package td1;
 
+
 public class Test {
   public static void afficherSomme(int i, int j) {
     i = i + j;

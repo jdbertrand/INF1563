@@ -1,5 +1,6 @@
 package td4;
 
+
 public class Interet {
 
   static double soldeInitial = 1000;

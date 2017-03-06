@@ -1,5 +1,6 @@
 package devoir1;
 
+
 import java.util.Scanner;
 
 /* 

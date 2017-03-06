@@ -2,6 +2,7 @@ package td2;
 import java.util.Scanner;
 //Exercice No 9
 
+
 class PairOuImpair 
 {
    public static void main(String args[])

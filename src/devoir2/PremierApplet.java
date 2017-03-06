@@ -1,5 +1,6 @@
 package devoir2;
 
+
 public class PremierApplet extends java.applet.Applet {
 
 	   // Méthode d'initialisation appelée aprés le chargement dans le navigateur

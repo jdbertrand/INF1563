@@ -1,5 +1,6 @@
 package td4;
 
+
 public class Boucle {
   static int i =1;
   public static void main(String[] args) {

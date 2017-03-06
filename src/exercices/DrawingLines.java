@@ -1,5 +1,6 @@
 package exercices;
 
+
 import java.applet.*;
 import java.awt.*;
  

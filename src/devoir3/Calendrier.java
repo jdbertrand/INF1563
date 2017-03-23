@@ -1,16 +1,23 @@
 package devoir3;
 
 import java.awt.*;
+import java.util.Calendar;
 import java.util.GregorianCalendar;
 
 import javax.swing.*;
 
 public class Calendrier extends JApplet {
+	
+	public Calendrier(){
+		//Constructeur
+	}
+	
 	// Variable d'instances
 	GregorianCalendar calendar = new GregorianCalendar();
 	int rangee = 7;
 	int colonne = 7;
-	String[] semaine = {"Lu", "Ma", "Me", "Je", "Ve", "Sa", "Di" };
+	//Tableau pour 
+	String[] jourSemaine = {"Lu", "Ma", "Me", "Je", "Ve", "Sa", "Di" };
 	
 	//Interface utilisateur en Applet
 	JLabel[][] grid = new JLabel[rangee][colonne];
@@ -45,14 +52,14 @@ public class Calendrier extends JApplet {
 		contenu.add(jpnlHeure, "South");
 		jpnlHeure.add(jlblHeure);
 
-		// draw time
+		// Dessin de l'heure
 		if (calendar.get(GregorianCalendar.MINUTE) < 10) {
 			jlblHeure = new JLabel("Heure: " + "" + calendar.get(GregorianCalendar.HOUR_OF_DAY) + ":" + "0"
 					+ calendar.get(GregorianCalendar.MINUTE));
 		}
 		// Dessin de l'entête des demaines
-		for (int i = 0; i < semaine.length; i++) {
-			grid[0][i].setText(semaine[i]);
+		for (int i = 0; i < jourSemaine.length; i++) {
+			grid[0][i].setText(jourSemaine[i]);
 		}
 		// conditions for the calendar
 		calendar.set(GregorianCalendar.DAY_OF_MONTH, 1);
@@ -74,9 +81,9 @@ public class Calendrier extends JApplet {
 		for (int i = 2; i <= colonne; i++) {
 			for (int j = 0; j < rangee; j++) {
 				if (days <= daysInMonth) {
-					grid[i][j].setText(days + "");
+					grid[i][j].setText(Integer.toString(days));
 					if (days == today)
-						grid[i][j].setText(days + "*");
+						grid[i][j].setText(Integer.toString(days) + "*");
 					days++;
 				}
 			}

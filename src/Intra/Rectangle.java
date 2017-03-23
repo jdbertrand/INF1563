@@ -5,6 +5,11 @@ public class Rectangle {
 	private double longueur = 1;
 	private double largeur = 1;
 
+	public static double MIN_LONGUEUR = 1;
+	public static double MIN_LARGUEUR = 1;
+	public static double MAX_LONGUEUR = 22;
+	public static double MAX_LARGEUR = 12;
+	
 	public Rectangle() {
 		// Constructeur
 	}
@@ -38,11 +43,11 @@ public class Rectangle {
 
 	}
 
-	private void setLargeur(double larg) {
+	public void setLargeur(double larg) {
 		// La méthode setLargeur change la valeur seulement si entre 1 et 12
-		if (larg > 12) {
+		if (larg > MAX_LONGUEUR) {
 			System.out.println("La largeur demandée est trop grande! L'appel n'est pas exécuté.");
-		} else if (larg < 1) {
+		} else if (larg < MIN_LARGUEUR) {
 			System.out.println("La largeur demandée est trop petite! L'appel n'est pas exécuté.");
 		} else {
 			this.largeur = larg;
@@ -50,28 +55,28 @@ public class Rectangle {
 
 	}
 
-	private void setLongueur(double longueur) {
+	public void setLongueur(double longueur) {
 		// La méthode setLongueur change la valeur seulement si entre 1 et 22
-		if (longueur > 22) {
+		if (longueur > MAX_LARGEUR) {
 			System.out.println("La longueur spécifiée est trop grande! L'appel n'est pas exécuté.");
-		} else if (longueur < 1) {
+		} else if (longueur < MIN_LONGUEUR) {
 			System.out.println("La longeur spécifiée est trop petite! L'appel n'est pas exécuté.");
 		} else {
 			this.longueur = longueur;
 		}
 	}
 
-	private double getLongueur() {
+	public double getLongueur() {
 		// Methode accessor pour la Longueur
 		return longueur;
 	}
 
-	private double getLargeur() {
+	public double getLargeur() {
 		// Methode Accessor pour la Largeur
 		return largeur;
 	}
 
-	private void zoomer(double z) {
+	public void zoomer(double z) {
 		// Methode qui permet de zoomer
 		z = z / 100;
 
@@ -83,7 +88,7 @@ public class Rectangle {
 
 	}
 
-	private String aire() {
+	public String aire() {
 		// Formule de l'aire
 		// Longueur * Largeur
 		double aire = getLongueur() * getLargeur();
@@ -91,7 +96,7 @@ public class Rectangle {
 
 	}
 
-	private String perimetre() {
+	public String perimetre() {
 		// Formule du perimetre
 		// 2L + 2l
 		double aire = (2 * getLongueur()) + (2 * getLargeur());
